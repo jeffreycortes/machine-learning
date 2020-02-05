@@ -1,2 +1,2 @@
 from .app import app
-from ..services import home_service
+from ..controllers import home_controller
