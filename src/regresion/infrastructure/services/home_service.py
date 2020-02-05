@@ -1,4 +1,4 @@
-from .app import app, jsonify
+from ..rest_client.app import app, jsonify
 
 @app.route("/")
 def index():
