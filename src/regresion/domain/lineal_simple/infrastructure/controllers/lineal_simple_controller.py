@@ -2,7 +2,9 @@ from ...aplication.lineal_simple_service import linealSimpleService
 
 class LinealSimpleController:
     def __init__(self, app, jsonify):
+        self.__register_route_map(app, jsonify)
 
+    def __register_route_map(self, app, jsonify):
         @app.route("/api/regresion/lineal_simple")
         def index_lineal_simple():
             return jsonify('Hello from Regresion Lineal Simple')
