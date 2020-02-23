@@ -1,4 +1,4 @@
-from ...infrastructure.repositories.lineal_multiple_repository import linealMultipleRepository
+from ..infrastructure.repositories.lineal_multiple_repository import linealMultipleRepository
 
 class LinealMultipleService:
     def __init__(self, linealSimpleRepository):

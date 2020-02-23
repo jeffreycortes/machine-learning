@@ -1,4 +1,4 @@
-from ...infrastructure.repositories.no_lineal_repository import noLinealRepository
+from ..infrastructure.repositories.no_lineal_repository import noLinealRepository
 
 class NoLinealService:
     def __init__(self, linealSimpleRepository):
