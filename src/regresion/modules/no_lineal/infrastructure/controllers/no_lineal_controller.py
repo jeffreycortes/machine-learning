@@ -13,3 +13,28 @@ class NoLinealController(ApiController):
         @app.route("/api/regresion/no_lineal/ping")
         def ping_no_lineal():
             return jsonify('Ping from ' + noLinealService.printState())
+
+        @app.route("/api/regresion/no_lineal/cubic_chart_demo")
+        def no_lineal_cubic_chart_demo():
+            resp = '<h5>Cubic No Lineal Demo</h5>  <img alt="line chart" src="data:image/png;base64,' + noLinealService.print_cubic_chart_demo() + '">'
+            return resp
+
+        @app.route("/api/regresion/no_lineal/quad_chart_demo")
+        def no_lineal_quad_chart_demo():
+            resp = '<h5>Quad No Lineal Demo</h5>  <img alt="line chart" src="data:image/png;base64,' + noLinealService.print_quad_chart_demo() + '">'
+            return resp
+
+        @app.route("/api/regresion/no_lineal/exponential_chart_demo")
+        def no_lineal_exponential_chart_demo():
+            resp = '<h5>Exponential No Lineal Demo</h5>  <img alt="line chart" src="data:image/png;base64,' + noLinealService.print_exponential_chart_demo() + '">'
+            return resp
+
+        @app.route("/api/regresion/no_lineal/logarithmic_chart_demo")
+        def no_lineal_logarithmic_chart_demo():
+            resp = '<h5>Exponential No Lineal Demo</h5>  <img alt="line chart" src="data:image/png;base64,' + noLinealService.print_logarithmic_chart_demo() + '">'
+            return resp
+
+        @app.route("/api/regresion/no_lineal/sigmoidal_chart_demo")
+        def no_lineal_sigmoidal_chart_demo():
+            resp = '<h5>Exponential No Lineal Demo</h5>  <img alt="line chart" src="data:image/png;base64,' + noLinealService.print_sigmoidal_chart_demo() + '">'
+            return resp
