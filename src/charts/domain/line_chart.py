@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 from src.shared.domain.utils.img.img_manager import ImageManager
 
 class LineChart:
+    plt = None
+
     def __init__(self, x = 0, y = 0):
         self.x = x
         self.y = y

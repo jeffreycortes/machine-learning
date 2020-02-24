@@ -38,3 +38,23 @@ class NoLinealController(ApiController):
         def no_lineal_sigmoidal_chart_demo():
             resp = '<h5>Exponential No Lineal Demo</h5>  <img alt="line chart" src="data:image/png;base64,' + noLinealService.print_sigmoidal_chart_demo() + '">'
             return resp
+
+        @app.route("/api/regresion/no_lineal/demo")
+        def no_lineal_demo():
+            resp = '<h5>Exponential No Lineal Demo</h5>  <img alt="line chart" src="data:image/png;base64,' + noLinealService.no_lineal_demo() + '">'
+            return resp
+
+        @app.route("/api/regresion/no_lineal/demo2")
+        def no_lineal_demo2():
+            resp = '<h5>Exponential No Lineal Demo</h5>  <img alt="line chart" src="data:image/png;base64,' + noLinealService.no_lineal_demo2() + '">'
+            return resp
+
+        @app.route("/api/regresion/no_lineal/chart/sigmoid")
+        def no_lineal_print_sigmoid_chart():
+            resp = '<h5>Exponential No Lineal Demo</h5>  <img alt="line chart" src="data:image/png;base64,' + noLinealService.print_sigmoid_chart() + '">'
+            return resp
+
+        @app.route("/api/regresion/no_lineal/chart/regresion_model")
+        def no_lineal_print_regresion_model_chart():
+            resp = '<h5>Exponential No Lineal Demo</h5>  <img alt="line chart" src="data:image/png;base64,' + noLinealService.print_regresion_model_chart() + '">'
+            return resp
