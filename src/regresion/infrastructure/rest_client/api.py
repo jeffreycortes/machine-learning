@@ -1,3 +1,6 @@
 from ..rest_client.app import app
-from ..controllers import home_controller
-from ..controllers import subdomains_controller
+from ..controllers.home_controller import HomeController
+from ..controllers.subdomains_controller import SubdomainsController
+
+HomeController()
+SubdomainsController()
