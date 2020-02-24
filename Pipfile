@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 flask = "*"
 flask-cors = "*"
+matplotlib = "*"
+pandas = "*"
+sklearn = "*"
 
 [dev-packages]
 
