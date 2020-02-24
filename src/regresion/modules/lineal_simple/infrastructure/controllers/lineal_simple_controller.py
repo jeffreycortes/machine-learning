@@ -15,6 +15,6 @@ class LinealSimpleController(ApiController):
             return jsonify('Ping from ' + linealSimpleService.printState())
 
         @app.route("/api/regresion/lineal_simple/demo_chart")
-        def get_demo_chart():
+        def lineal_demo_chart():
             resp = '<h5>Chart Line Demo</h5>  <img alt="line chart" src="data:image/png;base64,' + linealSimpleService.print_demo_chart() + '">'
             return resp
