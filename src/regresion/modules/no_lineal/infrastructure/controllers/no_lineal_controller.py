@@ -1,10 +1,11 @@
+from src.regresion.infrastructure.controllers.api_controller import ApiController
 from ...aplication.no_lineal_service import noLinealService
 
-class NoLinealController:
-    def __init__(self, app, jsonify):
-        self.__register_route_map(app, jsonify)
+class NoLinealController(ApiController):
+    def __init__(self):
+        ApiController.__init__(self)
 
-    def __register_route_map(self, app, jsonify):
+    def _register_route_map(self, app, jsonify):
         @app.route("/api/regresion/no_lineal")
         def index_no_lineal():
             return jsonify('Hello from Regresion No Lineal')

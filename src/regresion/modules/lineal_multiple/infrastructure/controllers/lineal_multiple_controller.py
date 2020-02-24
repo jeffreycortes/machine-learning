@@ -1,10 +1,11 @@
+from src.regresion.infrastructure.controllers.api_controller import ApiController
 from ...aplication.lineal_multiple_service import linealMultipleService
 
-class LinealMultipleController:
-    def __init__(self, app, jsonify):
-        self.__register_route_map(app, jsonify)
+class LinealMultipleController(ApiController):
+    def __init__(self):
+        ApiController.__init__(self)
 
-    def __register_route_map(self, app, jsonify):
+    def _register_route_map(self, app, jsonify):
         @app.route("/api/regresion/lineal_multiple")
         def index_lineal_multiple():
             return jsonify('Hello from Regresion Lineal Múltiple')

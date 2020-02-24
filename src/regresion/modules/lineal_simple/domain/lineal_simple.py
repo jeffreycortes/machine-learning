@@ -6,6 +6,8 @@ import numpy as np
 from sklearn import linear_model
 from sklearn.metrics import r2_score
 
+from src.charts.domain.line_chart import LineChart
+
 class LinealSimple:
     def __init__(self):
         self._df = None
@@ -13,8 +15,9 @@ class LinealSimple:
 
     #Leyendo los datos
     def leer_datos(self, force = False):
-        if(self._df != None && not(force))
+        if (self._df != None and not force):
             return
+
         self._df = pd.read_csv("FuelConsumption.csv")
 
     def mostrar_datos(self, force = False):
@@ -93,3 +96,17 @@ class LinealSimple:
         print("Error medio absoluto: %.2f" % np.mean(np.absolute(test_y_ - test_y)))
         print("Suma residual de los cuadrados (MSE): %.2f" % np.mean((test_y_ - test_y) ** 2))
         print("R2-score: %.2f" % r2_score(test_y_ , test_y) )
+
+    def print_demo_chart(self):
+        lineChart = LineChart()
+        lineChart.x = np.arange(-5.0, 5.0, 0.1)
+        ##Se puede ajustar la pendiente y la intersección para verificar los cambios en el gráfico
+        lineChart.y = 2*(lineChart.x) + 3
+        y_noise = 2 * np.random.normal(size = lineChart.x.size)
+        lineChart.ydata = lineChart.y + y_noise
+        #plt.figure(figsize=(8,6))
+        lineChart.set_labels('Variable independiente', 'Variable dependiente')
+        lineChart.plot_default()
+        return lineChart.print_to_imgb64()
+
+linealSimple = LinealSimple()

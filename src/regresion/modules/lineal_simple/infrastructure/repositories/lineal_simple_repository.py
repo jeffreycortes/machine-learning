@@ -1,10 +1,10 @@
-class LinealMultipleRepository:
+class LinealSimpleRepository:
     def __init(self):
         self._conexion = ""
         self._usuario = ""
         self._password = ""
 
-    def save(linealSimple):
+    def save():
         return True
 
-linealMultipleRepository = LinealMultipleRepository()
+linealSimpleRepository = LinealSimpleRepository()
